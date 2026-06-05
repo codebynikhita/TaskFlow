@@ -2,6 +2,15 @@
 
 TaskFlow is a production-level, resume-worthy, full-stack task management application. It is engineered using modern software engineering patterns, showcasing a decoupled three-tier architecture, cookie-based token rotation, role-based access control (RBAC), and interactive UI experiences (such as native HTML5 drag-and-drop kanban pipelines and data visualizers).
 
+### 🚀 Live Demo
+
+| | URL |
+|--|-----|
+| **Frontend** | [https://frontend-olive-tau-15.vercel.app](https://frontend-olive-tau-15.vercel.app) |
+| **Backend API** | [https://taskflow-api-wer0.onrender.com/health](https://taskflow-api-wer0.onrender.com/health) |
+
+> **Note**: The backend is hosted on Render's free tier and may take ~30 seconds to wake up on first visit.
+
 ---
 
 ## Key Features
