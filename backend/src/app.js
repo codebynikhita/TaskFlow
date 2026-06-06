@@ -16,9 +16,14 @@ const app = express();
 app.use(helmet());
 
 // Configure CORS
-const allowedOrigins = process.env.CORS_ORIGINS
-  ? process.env.CORS_ORIGINS.split(',')
-  : ['http://localhost:3000', 'http://127.0.0.1:3000'];
+const defaultOrigins = [
+  'http://localhost:3000',
+  'http://127.0.0.1:3000',
+  'https://frontend-olive-tau-15.vercel.app',
+  'https://frontend-6temuqa7b-nikhitagp344-5699s-projects.vercel.app'
+];
+const envOrigins = process.env.CORS_ORIGINS ? process.env.CORS_ORIGINS.split(',') : [];
+const allowedOrigins = [...new Set([...defaultOrigins, ...envOrigins])];
 
 app.use(cors({
   origin: allowedOrigins,
